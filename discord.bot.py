@@ -1,5 +1,5 @@
 import discord
-import asyncio
+import os
 
 client = discord.client()
 
@@ -22,4 +22,5 @@ async def on_measage(measage):
 async def on_measage(measage):
     if message.content == "띠껍아 정보":
         await message.channel.send(개발자:하선지/n 개발팀:Team dawnair | 팀 새벽공기/n 버전 0.1/n 개발 환경:discord.py로 만들었고, Visual Studio Code를 이용해 편집했습니다.)
-client.run(token)
+        access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
